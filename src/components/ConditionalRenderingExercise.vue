@@ -10,7 +10,7 @@
             screen.
           </p>
           <!-- add code to element below -->
-          <div class="player-card text-center">
+          <div class="state.player-card" v-if="true">
             <div>
               <img :src="state.player.photo" />
             </div>
@@ -38,7 +38,7 @@
             toggle the value to true to get it to show up again.
           </p>
           <!-- add code to element below -->
-          <div class="player-card text-center">
+          <div class="player-card text-center" v-if="state.player.showPlayer">
             <div>
               <img :src="state.player.photo" />
             </div>
@@ -134,6 +134,7 @@ export default {
         photo: "https://robohash.org/D$",
         name: "D$",
         position: "WR",
+        showPlayer: true,
         number: 4,
       },
     });
